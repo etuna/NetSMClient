@@ -4,25 +4,46 @@ import {Router} from '@angular/router';  // Firebase modules for Database, Data 
 
 
 @Injectable()
-export class AuthenticationService {
+export class StockService {
   constructor(private http: HttpClient,
               private router: Router) {
   }
-  public authenticate(username, password){
+
+  /**
+   * Admin
+   */
+
+  public addStock(stock) {
 
   }
-  public createSession(user){
+
+  public delStock(stockId) {
 
   }
-  public delSession(user){
+
+  public getStocks() {
 
   }
 
-  public addUser(user){
+  /**
+   * User
+   *
+   */
+  public getStock(id) {
 
   }
-  public getUsers(){
+
+  public getStocksByUserId(id) {
 
   }
+
+  public buyStock(userId, stockId, price, quantity) {
+
+  }
+
+  public sellStock(userId, stockId, price, quantity) {
+
+  }
+
 
 }
