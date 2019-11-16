@@ -58,12 +58,14 @@ label {
   left: 5px;
   top: 10px;
   transition: all 0.2s ease;
+  display:none;
 }
 
 
 /* active */
 
 input:focus ~ label, input.used ~ label {
+  display: block;
   top: -20px;
   transform: scale(.75); left: -2px;
   /* font-size: 14px; */
