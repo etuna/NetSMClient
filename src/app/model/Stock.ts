@@ -1,5 +1,5 @@
 export class Stock {
-  id: string;
-  description: string;
+  code: string;
+  name: string;
   price: number;
 }
