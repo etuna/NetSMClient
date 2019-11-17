@@ -1,4 +1,5 @@
 <div class="userDashContainer">
+  <p>{{username}}</p>
   <div class="stocksContainer">
     <a class="buyStockButton"></a>
     <div class="buyStockOperationBlock">
@@ -7,10 +8,12 @@
 
     <div class="stocksDisplay">
       <h1>STOCKS</h1>
-      <div class="stock">
+      <div class="stock" *ngFor="let transaction of transactions">
         <ul>
-          <li><span></span></li>
-          <li><span></span></li>
+          <li><span>{{transaction.stock}}</span></li>
+          <li><span>{{transaction.price}}</span></li>
+          <li><span>{{transaction.quantity}}</span></li>
+          <li><span>{{transaction.operation}}</span></li>
           <li><a class="sellStockButton"></a></li>
         </ul>
       </div>

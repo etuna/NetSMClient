@@ -7,15 +7,18 @@ import { AdminComponent } from './admin/admin.component';
 import { UserComponent } from './user/user.component';
 import {AppRoutingModule} from './app-routing.module';
 import {FormsModule} from '@angular/forms';
+import {AuthenticationService} from './services/Authentication.service';
+import {StockService} from './services/Stock.service';
+import {HttpClient, HttpClientModule, HttpHandler} from '@angular/common/http';
 @NgModule({
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   declarations: [
     AppComponent,
     LoginComponent,
     AdminComponent,
     UserComponent
   ],
-  providers: [],
+  providers: [AuthenticationService, StockService, HttpClient],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
