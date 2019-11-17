@@ -52,11 +52,9 @@ export class StockService {
     });
   }
 
-  public getStocksByUserId(id) {
+  public getTransactions(id) {
     const url = Constants.ALL_STOCKS_USER + '/' + id;
-    return this.http.get<any>(url).toPromise().then(data => {
-      return data;
-    });
+    return this.http.get<any>(url);
   }
 
   public buyStock(buyRequest: BuyRequest) {

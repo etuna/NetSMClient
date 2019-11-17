@@ -2,7 +2,10 @@ import {Stock} from './Stock';
 import {User} from './User';
 
 export class Transaction {
-  user: User;
-  stock: Stock;
+  id: string;
+  userId: string;
+  stock: string;
+  price: number;
   quantity: number;
+  operation: string;
 }
